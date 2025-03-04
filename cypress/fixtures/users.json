@@ -1,0 +1,82 @@
+[
+  {
+    "name": "John Doe",
+    "job": "Software Engineer"
+  },
+  {
+    "name": "Jane Smith",
+    "job": "Data Scientist"
+  },
+  {
+    "name": "Michael Johnson",
+    "job": "Product Manager"
+  },
+  {
+    "name": "Emily Davis",
+    "job": "UX Designer"
+  },
+  {
+    "name": "William Brown",
+    "job": "Marketing Specialist"
+  },
+  {
+    "name": "Olivia Wilson",
+    "job": "HR Manager"
+  },
+  {
+    "name": "James Jones",
+    "job": "Financial Analyst"
+  },
+  {
+    "name": "Isabella Garcia",
+    "job": "Sales Executive"
+  },
+  {
+    "name": "Ethan Martinez",
+    "job": "Operations Manager"
+  },
+  {
+    "name": "Sophia Rodriguez",
+    "job": "Content Writer"
+  },
+  {
+    "name": "Alexander Lee",
+    "job": "Graphic Designer"
+  },
+  {
+    "name": "Mia Hernandez",
+    "job": "Customer Support"
+  },
+  {
+    "name": "Benjamin Clark",
+    "job": "Network Administrator"
+  },
+  {
+    "name": "Ava Lewis",
+    "job": "SEO Specialist"
+  },
+  {
+    "name": "Lucas Walker",
+    "job": "DevOps Engineer"
+  },
+  {
+    "name": "Charlotte Hall",
+    "job": "Business Analyst"
+  },
+  {
+    "name": "Mason Young",
+    "job": "Technical Writer"
+  },
+  {
+    "name": "Amelia King",
+    "job": "Project Coordinator"
+  },
+  {
+    "name": "Henry Scott",
+    "job": "IT Consultant"
+  },
+  {
+    "name": "Evelyn Adams",
+    "job": "Social Media Manager"
+  }
+]

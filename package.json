@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "cypress:cli": "npx cypress run",
+    "cypress:chrome": "npx cypress run -b chrome --headed"
+  },
   "dependencies": {
     "cypress": "^14.0.3"
   }
