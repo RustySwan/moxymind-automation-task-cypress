@@ -4,6 +4,7 @@
     "cypress:chrome": "npx cypress run -b chrome --headed"
   },
   "dependencies": {
-    "cypress": "^14.0.3"
+    "cypress": "^14.0.3",
+    "typescript": "^5.8.2"
   }
 }

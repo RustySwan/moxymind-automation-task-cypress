@@ -1,5 +1,3 @@
-import "cypress-each";
-
 const testData = require('../../fixtures/users.json')
 const maxResponseTime = 150; 
 

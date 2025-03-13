@@ -10,14 +10,18 @@ describe("Saucedemo.com tests", () => {
   it("Sucessfull login", () => {
     cy.getDataTest("username").type("standard_user");
     cy.getDataTest("password").type("secret_sauce");
+
     cy.getDataTest("login-button").click();
+
     cy.getDataTest("inventory-list").should("exist");
   });
 
   it("Unsucessfull login", () => {
     cy.getDataTest("username").type("locked_out_user");
     cy.getDataTest("password").type("secret_sauce");
+
     cy.getDataTest("login-button").click();
+
     cy.getDataTest("error").should(
       "have.text",
       "Epic sadface: Sorry, this user has been locked out."
@@ -26,7 +30,9 @@ describe("Saucedemo.com tests", () => {
 
   it("Login without password", () => {
     cy.getDataTest("username").type("standard_user");
+
     cy.getDataTest("login-button").click();
+
     cy.getDataTest("error").should(
       "have.text",
       "Epic sadface: Password is required"
@@ -36,7 +42,9 @@ describe("Saucedemo.com tests", () => {
   it("A to Z Sorting test", () => {
     cy.getDataTest("username").type("standard_user");
     cy.getDataTest("password").type("secret_sauce");
+
     cy.getDataTest("login-button").click();
+
     cy.getDataTest("inventory-list").should("exist");
 
     cy.getDataTest("product-sort-container").select("az");
@@ -54,7 +62,9 @@ describe("Saucedemo.com tests", () => {
   it("Z to A Sorting test", () => {
     cy.getDataTest("username").type("standard_user");
     cy.getDataTest("password").type("secret_sauce");
+
     cy.getDataTest("login-button").click();
+
     cy.getDataTest("inventory-list").should("exist");
 
     cy.getDataTest("product-sort-container").select("za");
@@ -72,7 +82,9 @@ describe("Saucedemo.com tests", () => {
   it("Price low to high sorting test", () => {
     cy.getDataTest("username").type("standard_user");
     cy.getDataTest("password").type("secret_sauce");
+
     cy.getDataTest("login-button").click();
+
     cy.getDataTest("inventory-list").should("exist");
 
     cy.getDataTest("product-sort-container").select("lohi");
@@ -93,7 +105,9 @@ describe("Saucedemo.com tests", () => {
   it("Price high to low sorting test", () => {
     cy.getDataTest("username").type("standard_user");
     cy.getDataTest("password").type("secret_sauce");
+
     cy.getDataTest("login-button").click();
+
     cy.getDataTest("inventory-list").should("exist");
 
     cy.getDataTest("product-sort-container").select("hilo");
@@ -114,7 +128,9 @@ describe("Saucedemo.com tests", () => {
   it("Adding product to cart and verify label, description and price", () => {
     cy.getDataTest("username").type("standard_user");
     cy.getDataTest("password").type("secret_sauce");
+
     cy.getDataTest("login-button").click();
+
     cy.getDataTest("inventory-list").should("exist");
 
     cy.getDataTest("inventory-item")
@@ -145,7 +161,9 @@ describe("Saucedemo.com tests", () => {
   it("Adding product to cart and removing them ", () => {
     cy.getDataTest("username").type("standard_user");
     cy.getDataTest("password").type("secret_sauce");
+
     cy.getDataTest("login-button").click();
+
     cy.getDataTest("inventory-list").should("exist");
 
     cy.getDataTest("inventory-item")
@@ -156,29 +174,16 @@ describe("Saucedemo.com tests", () => {
 
     cy.getDataTest("shopping-cart-badge").click();
     cy.get(".item_pricebar button").click()
+
     cy.getDataTest("inventory-item").should("not.exist")
-  });
-  
-  it("Add product and get to checkout", () => {
-    cy.getDataTest("username").type("standard_user");
-    cy.getDataTest("password").type("secret_sauce");
-    cy.getDataTest("login-button").click();
-    cy.getDataTest("inventory-list").should("exist");
-
-    cy.getDataTest("inventory-item")
-      .its(0)
-      .within(() => {
-        cy.get(".btn").click();
-      });
-
-    cy.getDataTest("shopping-cart-badge").click();
-    cy.getDataTest("checkout").click()
   });
 
   it("Checkout the product and return home", () => {
     cy.getDataTest("username").type("standard_user");
     cy.getDataTest("password").type("secret_sauce");
+
     cy.getDataTest("login-button").click();
+
     cy.getDataTest("inventory-list").should("exist");
 
     cy.getDataTest("inventory-item")
@@ -199,5 +204,7 @@ describe("Saucedemo.com tests", () => {
 
     cy.getDataTest("checkout-complete-container").should("exist")
     cy.getDataTest("back-to-products").click()
+
+    cy.getDataTest("inventory-list").should("exist");
   });
 });
